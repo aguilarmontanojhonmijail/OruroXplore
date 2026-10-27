@@ -1,0 +1,1201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial,sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #f4f4f4;
+    color: #222;
+}
+.barra-bolivia {
+    height: 10px;
+    background: linear-gradient( to right,#d52b1e 33.33%,#f9e300 33.33%,#f9e300 66.66%,#007934 66.66% );
+}
+nav {
+    background: #111;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+}
+.logo span {
+    color: #f9e300;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #f9e300;
+}
+#leo-tours {
+    background: white;
+}
+.ubicacion-contenido {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+.ubicacion-texto {
+    background: #111;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+.ubicacion-texto h3 {
+    color: #f9e300;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+.ubicacion-texto p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #eee;
+}
+.mapa-leo {
+    width: 100%;
+    min-height: 350px;
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
+}
+.boton-mapa {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 12px 22px;
+    background: #d52b1e;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+.boton-mapa:hover {
+    background: #f9e300;
+    color: #111;
+}
+.inicio {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    background: linear-gradient( rgba(0,0,0,.65),rgba(0,0,0,.65) ),url("carnaval-oruro.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.inicio-contenido {
+    max-width: 850px;
+}
+.inicio h1 {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+.inicio h1 span {
+    color: #f9e300;
+}
+.inicio p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+.borde {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-bottom: 25px;
+    border: 2px solid #f9e300;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.boton {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 30px;
+    background: #d52b1e;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.boton:hover {
+    background: #f9e300;
+    color: #111;
+}
+section {
+    padding: 70px 7%;
+}
+.titulo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.titulo h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+.titulo p {
+    color: #666;
+    font-size: 17px;
+}
+#mapa {
+    background: white;
+}
+.mapa-principal {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 40px;
+    align-items: center;
+}
+.mapa {
+    background: #f1f1f1;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.12);
+    text-align: center;
+}
+.mapa h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.mapa img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+.informacion {
+    min-height: 400px;
+    background: #111;
+    color: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+}
+.informacion h3 {
+    font-size: 30px;
+    color: #f9e300;
+    margin-bottom: 20px;
+}
+.informacion p {
+    line-height: 1.7;
+    color: #ddd;
+    margin-bottom: 18px;
+}
+.informacion ul {
+    padding-left: 20px;
+    line-height: 2;
+}
+.instruccion {
+    background: #d52b1e;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#lugares {
+    background: #eee;
+}
+.cards {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+}
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,.1);
+    transition: .3s;
+}
+.card:hover {
+    transform: translateY(-7px);
+}
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+.card-contenido {
+    padding: 22px;
+}
+.descripcion {
+    max-height: 6.4em;
+    overflow: hidden;
+    line-height: 1.6;
+}
+.descripcion.expandir {
+    max-height: none;
+    overflow: visible;
+}
+.boton-ver-mas {
+    background: none;
+    border: none;
+    color: #d52b1e;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px 0;
+}
+.boton-ver-mas:hover {
+    text-decoration: underline;
+}
+.lugares-mapa {
+    margin-top: 18px;
+    text-align: left;
+}
+.lugares-mapa > p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+.botones-lugares-mapa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.boton-lugar {
+    border: 2px solid #ff0000;
+    border-radius: 40px;
+    padding: 8px 12px;
+    background: rgb(254, 253, 255);
+    color: #cf2c03;
+    font-weight: bold;
+    cursor: pointer;
+    background: transition, color 0.2s ease;
+}
+.boton-lugar:hover, .boton-lugar:focus-visible {
+    background: #d52b1e;
+    color: white;
+}
+.nota-mapa {
+    margin-top: 12px;
+    color: #666;
+    font-size: 13px;
+}
+.etiqueta {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #d52b1e;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+.card p {
+    color: #555;
+    line-height: 1.6;
+}
+.aniversario-seccion {
+    background: linear-gradient( 135deg,#d52b1e,#8e1912 );
+    color: rgb(212,175,55);
+    text-align: center;
+}
+.numero {
+    font-size: 110px;
+    font-weight: bold;
+    color: #fdfdfd;
+}
+.aniversario-seccion h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+.aniversario-seccion p {
+    font-size: 20px;
+    line-height: 1.7;
+}
+.proyecto {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+.proyecto p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+footer strong {
+    color: #f9e300;
+}
+@media (max-width:800px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .inicio h1 {
+        font-size: 43px;
+    }
+    .mapa-principal {
+        grid-template-columns: 1fr;
+    }
+    .departamentos {
+        grid-template-columns: 1fr;
+    }
+    .inicio p {
+        font-size: 17px;
+    }
+    .titulo h2 {
+        font-size: 30px;
+    }
+    .ubicacion-contenido {
+        grid-template-columns: 1fr;
+    }
+    .mapa-leo {
+        min-height: 300px;
+    }
+}
+@media (max-width:800px) {
+    .boton-lugar {
+        font-size: 13px;
+    }
+    .mapa iframe {
+        height: 320px;
+    }
+}
+/* Tarjeta ampliada: gana espacio sin estirar todas las demás tarjetas */
+.cards {
+    align-items: start;
+}
+.card {
+    align-self: start;
+    min-width: 0;
+}
+.card-expandida {
+    grid-column: span 2;
+    transform: none !important;
+}
+.card-expandida:hover {
+    transform: none !important;
+}
+.card-expandida .descripcion {
+    overflow-wrap: anywhere;
+}
+.boton-idioma {
+    border: 1px solid #f9e300;
+    border-radius: 22px;
+    background: #d52b1e;
+    color: #fff;
+    padding: 9px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.boton-idioma:hover {
+    background: #f9e300;
+    color: #111;
+}
+.boton-lugar {
+    max-width: 100%;
+    white-space: normal;
+}
+@media (max-width: 900px) {
+    .card-expandida {
+        grid-column: 1 / -1;
+    }
+}
+@media (max-width: 600px) {
+    nav {
+        padding: 16px 5%;
+    }
+    nav ul {
+        gap: 12px;
+        padding: 0;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    .boton-idioma {
+        align-self: flex-end;
+    }
+    section {
+        padding: 42px 5%;
+    }
+    .inicio {
+        min-height: 420px;
+        padding: 30px 5%;
+    }
+    .inicio h1 {
+        font-size: clamp(36px,10vw,48px);
+        overflow-wrap: anywhere;
+    }
+    .inicio p {
+        font-size: 16px;
+    }
+    .titulo h2 {
+        font-size: 28px;
+    }
+    .titulo p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    .cards {
+        grid-template-columns: minmax(0,1fr);
+        gap: 18px;
+    }
+    .card-expandida {
+        grid-column: 1 / -1;
+    }
+    .card img {
+        height: 200px;
+    }
+    .card-contenido {
+        padding: 18px;
+    }
+    .card h3 {
+        font-size: 21px;
+    }
+    .mapa {
+        padding: 14px;
+    }
+    .mapa iframe {
+        height: 300px;
+    }
+    .botones-lugares-mapa {
+        grid-template-columns: 1fr;
+    }
+    .informacion {
+        padding: 24px;
+        min-height: auto;
+    }
+    .numero {
+        font-size: clamp(54px,15vw,90px);
+    }
+    .aniversario-seccion h2 {
+        font-size: 30px;
+    }
+    .aniversario-seccion p {
+        font-size: 17px;
+    }
+    .proyecto p {
+        font-size: 16px;
+        text-align: left;
+    }
+    .ubicacion-texto {
+        padding: 22px;
+    }
+    .mapa-leo {
+        min-height: 280px;
+    }
+}
+/* Galería de fotos que aparece al pulsar "Ver más" */
+.galeria-fotos {
+    display: none;
+    grid-template-columns: repeat(auto-fit,minmax(110px,1fr));
+    gap: 10px;
+    margin: 15px 0;
+}
+.galeria-fotos.galeria-visible {
+    display: grid;
+}
+.galeria-fotos img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+.galeria-fotos img:hover {
+    transform: scale(1.04);
+}
+.visor-foto {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,.88);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+}
+.visor-foto.visor-visible {
+    display: flex;
+}
+.visor-foto img {
+    max-width: min(90vw,1000px);
+    max-height: 78vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.visor-foto p {
+    color: white;
+    margin-top: 12px;
+    text-align: center;
+}
+.cerrar-foto {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    background: #d52b1e;
+    border: 0;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 30px;
+    cursor: pointer;
+}
+@media (max-width:600px) {
+    .galeria-fotos {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .galeria-fotos img {
+        height: 115px;
+    }
+}
+/* ===== Mejoras visuales de OruroXplore ===== */
+:root {
+    --rojo-oruro: #d52b1e;
+    --amarillo-oruro: #f9e300;
+    --negro-oruro: #151515;
+}
+body {
+    overflow-x: hidden;
+}
+body > *:not(.fondo-animado) {
+    position: relative;
+    z-index: 1;
+}
+.fondo-animado {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(120deg,rgba(255,255,255,.96),rgba(250,246,238,.92),rgba(255,255,255,.96));
+}
+.fondo-animado span {
+    position: absolute;
+    width: 34vw;
+    height: 34vw;
+    min-width: 220px;
+    min-height: 220px;
+    border-radius: 50%;
+    filter: blur(55px);
+    opacity: .14;
+    animation: flotarFondo 18s ease-in-out infinite alternate;
+}
+.fondo-animado span:nth-child(1) {
+    background: #d52b1e;
+    top: 8%;
+    left: -10%;
+}
+.fondo-animado span:nth-child(2) {
+    background: #f9e300;
+    top: 42%;
+    right: -12%;
+    animation-delay: -6s;
+}
+.fondo-animado span:nth-child(3) {
+    background: #007934;
+    bottom: -12%;
+    left: 35%;
+    animation-delay: -11s;
+}
+@keyframes flotarFondo {
+    0% {
+        transform: translate3d(0,0,0) scale(1);
+    }
+    50% {
+        transform: translate3d(6vw,-4vh,0) scale(1.12);
+    }
+    100% {
+        transform: translate3d(-3vw,5vh,0) scale(.94);
+    }
+}
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 8px 25px rgba(0,0,0,.18);
+}
+nav a {
+    transition: color .2s ease,opacity .2s ease;
+}
+nav a:focus-visible, button:focus-visible, a:focus-visible {
+    outline: 3px solid #f9e300;
+    outline-offset: 4px;
+}
+.inicio {
+    background-attachment: fixed;
+    position: relative;
+    isolation: isolate;
+}
+.inicio::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(115deg,rgba(213,43,30,.18),transparent 45%,rgba(0,121,52,.2));
+    background-size: 200% 200%;
+    animation: brilloInicio 12s ease infinite;
+}
+@keyframes brilloInicio {
+    0%,100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+.card {
+    transition: transform .28s ease,box-shadow .28s ease;
+}
+.card:hover {
+    box-shadow: 0 16px 34px rgba(0,0,0,.16);
+}
+.boton, .boton-mapa, .boton-ver-mas, .boton-lugar {
+    transition: transform .2s ease,background .2s ease,color .2s ease;
+}
+.boton:hover, .boton-mapa:hover {
+    transform: translateY(-2px);
+}
+#leo-tours {
+    background: rgba(255,255,255,.72);
+}
+.leo-seccion {
+    position: relative;
+}
+.leo-panel {
+    background: linear-gradient(145deg,#171717,#292929);
+    box-shadow: 0 18px 40px rgba(0,0,0,.17);
+}
+.leo-etiqueta {
+    display: inline-block;
+    padding: 7px 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(249,227,0,.65);
+    border-radius: 25px;
+    color: #f9e300;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+.dato-contacto {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+.dato-icono {
+    display: grid;
+    place-items: center;
+    flex: 0 0 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: rgba(249,227,0,.13);
+    color: #f9e300;
+    font-size: 22px;
+}
+.dato-contacto strong {
+    color: #fff;
+    display: block;
+    margin-bottom: 5px;
+}
+.dato-contacto p {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+.aviso-contacto {
+    padding: 12px 14px;
+    border-left: 3px solid #f9e300;
+    background: rgba(255,255,255,.08);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #eee;
+}
+.leo-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+.boton-secundario {
+    cursor: pointer;
+    border: 1px solid #f9e300;
+}
+.ayuda-contacto {
+    margin-top: 15px;
+    padding: 14px;
+    background: rgba(255,255,255,.08);
+    border-radius: 10px;
+}
+.leo-mapa-contenedor {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+    padding: 14px;
+}
+.leo-mapa-titulo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 8px 14px;
+}
+.leo-mapa-titulo > span {
+    font-size: 28px;
+}
+.leo-mapa-titulo strong {
+    font-size: 18px;
+}
+.leo-mapa-titulo p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 4px;
+}
+.mapa-leo {
+    display: block;
+    min-height: 360px;
+}
+.leo-mapa-contenedor .nota-mapa {
+    padding: 8px 5px 0;
+    line-height: 1.5;
+}
+section {
+    scroll-margin-top: 90px;
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+    .inicio {
+        background-attachment: scroll;
+    }
+}
+@media (max-width: 800px) {
+    nav {
+        position: relative;
+    }
+    .inicio {
+        background-attachment: scroll;
+    }
+    .leo-botones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .leo-botones .boton-mapa {
+        text-align: center;
+    }
+    .mapa-leo {
+        min-height: 290px;
+    }
+}
+.seccion-entrada {
+    opacity: .01;
+    transform: translateY(18px);
+    transition: opacity .65s ease,transform .65s ease;
+}
+.seccion-entrada.seccion-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    .seccion-entrada, .seccion-entrada.seccion-visible {
+        opacity: 1;
+        transform: none;
+    }
+}
+/* Categorías visuales para organizar los destinos turísticos */
+.encabezado-categoria {
+    grid-column: 1 / -1;
+    margin: 26px 0 4px;
+    padding: 12px 16px;
+    border-left: 4px solid #d6a33d;
+    border-radius: 8px;
+    background: rgba(214,163,61,0.12);
+    color: inherit;
+    font-size: 1.25rem;
+}
+.carnaval-historia {
+    margin: 22px auto;
+    max-width: 1100px;
+    padding: 0 18px;
+}
+.carnaval-historia > h3 {
+    margin-bottom: 8px;
+}
+.carnaval-historia > p {
+    line-height: 1.7;
+}
+.carnaval-historia .cards {
+    margin-top: 18px;
+}
+.boton-idioma {
+    cursor: pointer;
+}
+/* Filtros tipo pestaña para mostrar una sola categoría de lugares */
+.filtros-categorias {
+    max-width: 1200px;
+    margin: 22px auto 28px;
+    padding: 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.filtro-categoria {
+    border: 1px solid #d52b1e;
+    background: #fff;
+    color: #a51f17;
+    border-radius: 24px;
+    padding: 11px 20px;
+    font-weight: 700;
+    cursor: pointer;
+    background: transition .2s,color .2s,transform .2s;
+}
+.filtro-categoria:hover {
+    transform: translateY(-1px);
+}
+.filtro-categoria.activo,.filtro-categoria:focus-visible {
+    background: #d52b1e;
+    color: #fff;
+}
+#lugares .cards > .card[hidden] {
+    display: none !important;
+}
+/* Historia recuperada y sección de rutas consultables con Leo Tours */
+.historia-oruro {
+    padding: 64px 20px;
+    background: #f7f3ec;
+    color: #29251f;
+}
+.historia-contenido {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px 34px;
+    border-radius: 18px;
+    box-shadow: 0 8px 26px rgba(0,0,0,.08);
+    line-height: 1.8;
+}
+.historia-contenido h3 {
+    margin: 22px 0 8px;
+    color: #9e271d;
+}
+.historia-contenido h3:first-child {
+    margin-top: 0;
+}
+.historia-contenido p {
+    margin: 0 0 14px;
+}
+.boton-whatsapp-mapa,.boton-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #168b55;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 28px;
+    padding: 12px 18px;
+    margin-top: 12px;
+    transition: transform .2s;
+    background: .2s;
+}
+.boton-whatsapp-mapa:hover,.boton-whatsapp:hover {
+    background: #106c41;
+    transform: translateY(-2px);
+}
+.boton-whatsapp-mapa {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.leo-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+#lugares .filtro-categoria[data-categoria="rutas"] {
+    border-color: #168b55;
+    color: #126a43;
+}
+#lugares .filtro-categoria[data-categoria="rutas"].activo {
+    background: #168b55;
+    color: #fff;
+}
+@media (max-width:650px) {
+    .historia-contenido {
+        padding: 22px 18px;
+    }
+    .leo-botones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+.historia-oruro {
+    padding: 44px 20px;
+}
+.historia-contenido {
+    max-width: 1100px;
+}
+.historia-contenido p {
+    line-height: 1.8;
+    margin: 0 0 16px;
+}
+.carnaval-historia {
+    max-width: 1100px;
+    margin: 28px auto 0;
+    padding: 0;
+}
+.carnaval-panel {
+    display: grid;
+    grid-template-columns: minmax(240px,.85fr) minmax(0,1.4fr);
+    gap: 24px;
+    align-items: start;
+    background: #fff;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 8px 26px rgba(0,0,0,.08);
+}
+.carnaval-imagen {
+    width: 100%;
+    height: 100%;
+    max-height: 390px;
+    min-height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.carnaval-texto h3 {
+    margin-top: 0;
+    color: #9e271d;
+    font-size: 1.5rem;
+}
+.carnaval-texto .descripcion {
+    line-height: 1.75;
+    max-height: 7.2em;
+    overflow: hidden;
+    transition: max-height .35s ease;
+}
+.carnaval-texto .descripcion.expandir {
+    max-height: 1200px;
+}
+.carnaval-texto .boton-ver-mas {
+    margin-top: 8px;
+}
+.credito-imagen {
+    font-size: .8rem;
+    color: #6b7280;
+    margin: 10px 4px 0;
+}
+.credito-imagen a {
+    color: inherit;
+}
+@media (max-width:720px) {
+    .carnaval-panel {
+        grid-template-columns: 1fr;
+    }
+    .carnaval-imagen {
+        max-height: 270px;
+    }
+}
+/* Galería de videos del Carnaval de Oruro */
+.galeria-carnaval {
+    max-width: 1100px;
+    margin: 26px auto 8px;
+    padding: 0 18px 20px;
+}
+.galeria-carnaval-cabecera {
+    margin: 0 0 16px;
+}
+.galeria-carnaval-cabecera h3 {
+    font-size: 1.45rem;
+    color: #172e52;
+    margin-bottom: 6px;
+}
+.galeria-carnaval-cabecera p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+.videos-carnaval {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 18px;
+    align-items: start;
+}
+.video-carnaval-card {
+    align-self: start;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 7px 22px rgba(15,35,65,.12);
+    border: 1px solid #e1e8f0;
+}
+.video-marco {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #101827;
+}
+.video-marco iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.video-carnaval-info {
+    padding: 15px;
+}
+.video-carnaval-info h4 {
+    font-size: 1.12rem;
+    color: #172e52;
+    margin-bottom: 7px;
+}
+.video-carnaval-info p {
+    font-size: .92rem;
+    line-height: 1.55;
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+.boton-ampliar-video {
+    border: 0;
+    border-radius: 999px;
+    padding: 9px 14px;
+    background: #123b69;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.boton-ampliar-video:hover {
+    background: #087e66;
+}
+.nota-videos {
+    font-size: .82rem;
+    color: #6b7280;
+    margin-top: 14px;
+    line-height: 1.5;
+}
+.modal-video {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(3,10,22,.88);
+    padding: 22px;
+    align-items: center;
+    justify-content: center;
+}
+.modal-video.abierto {
+    display: flex;
+}
+.modal-video-contenido {
+    width: min(100%,1050px);
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 65px rgba(0,0,0,.4);
+}
+.modal-video-barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 13px 17px;
+    color: #172e52;
+}
+.modal-video-barra h3 {
+    font-size: 1.1rem;
+}
+.cerrar-modal-video {
+    border: 0;
+    border-radius: 8px;
+    background: #edf2f7;
+    color: #172e52;
+    padding: 8px 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.modal-video-marco {
+    aspect-ratio: 16/9;
+    background: #000;
+}
+.modal-video-marco iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+@media (max-width:800px) {
+    .videos-carnaval {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:540px) {
+    .videos-carnaval {
+        grid-template-columns: 1fr;
+    }
+    .galeria-carnaval {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .modal-video {
+        padding: 10px;
+    }
+    .modal-video-barra h3 {
+        font-size: .95rem;
+    }
+}
+/* Controles y descripciones de las tres danzas del Carnaval */
+.historia-danza {
+    max-height: 6.6em;
+    overflow: hidden;
+    line-height: 1.65;
+    margin-bottom: 8px;
+}
+.historia-danza.expandir {
+    max-height: none;
+    overflow: visible;
+}
+.video-acciones {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+.video-acciones .boton-ver-mas,.video-acciones .boton-ampliar-video {
+    margin: 0;
+}

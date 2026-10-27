@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>OruroXplore - Turismo en Oruro</title>
+    <link href="estilo.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div aria-hidden="true" class="fondo-animado"><span></span><span></span><span></span></div>
+    <div class="barra-bolivia"></div>
+    <nav>
+        <button aria-label="Switch language" class="boton-idioma" id="botonIdioma" onclick="cambiarIdioma()"
+            type="button">English</button>
+        <div class="logo">
+            Oruro<span>Xplore</span>
+        </div>
+        <ul>
+            <li>
+                <a href="#inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="#mapa">Mapa</a>
+            </li>
+            <li>
+                <a href="#lugares">Lugares</a>
+            </li>
+            <li>
+                <a href="#leo-tours">Turismo con Leo Tours</a>
+            </li>
+            <li>
+                <a href="#historia">Historia</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="inicio" id="inicio">
+        <div class="inicio-contenido">
+            <div class="borde">
+
+                📍 ORURO · BOLIVIA
+
+            </div>
+            <h1>
+                Oruro<span>Xplore</span>
+            </h1>
+            <p>
+
+                Descubre los lugares turísticos de Oruro.
+
+            </p>
+            <p>
+
+                Naturaleza · Historia · Turismo
+
+            </p>
+            <a class="boton" href="#mapa">
+
+                VER MAPA DE ORURO
+
+            </a>
+        </div>
+    </section>
+    <section id="mapa">
+        <div class="titulo">
+            <h2>Mapa turístico de Oruro</h2>
+            <p>
+
+                Explora la ciudad de Oruro y ubica algunos de sus
+                principales atractivos turísticos.
+
+            </p>
+        </div>
+        <div class="mapa-principal">
+            <div class="mapa">
+                <h3>📍 Mapa de Oruro</h3>
+                <iframe height="360" id="mapaOruro" loading="lazy"
+                    src="https://maps.google.com/maps?q=Oruro%2C%20Bolivia&amp;t=k&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                    style="border:0;border-radius:10px" title="Mapa interactivo de atractivos turísticos de Oruro"
+                    width="100%">
+                </iframe>
+                <div class="lugares-mapa">
+                    <p><strong>Selecciona un lugar turístico para ubicarlo en el mapa:</strong></p>
+                    <div class="botones-lugares-mapa">
+                        <button class="boton-lugar" data-place-en="Parque Nacional Sajama, Oruro, Bolivia"
+                            data-place-es="Parque Nacional Sajama, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Parque Nacional Sajama</button>
+                        <button class="boton-lugar" data-place-en="Monumento Virgen del Socavón, Oruro, Bolivia"
+                            data-place-es="Monumento Virgen del Socavón, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Virgen del Socavón</button>
+                        <button class="boton-lugar" data-place-en="Aguas Termales de Obrajes, Oruro, Bolivia"
+                            data-place-es="Aguas Termales de Obrajes, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Aguas termales de Obrajes</button>
+                        <button class="boton-lugar" data-place-en="Plaza 10 de Febrero, Oruro, Bolivia"
+                            data-place-es="Plaza 10 de Febrero, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Plaza 10 de Febrero</button>
+                        <button class="boton-lugar" data-place-en="Lago Uru Uru, Oruro, Bolivia"
+                            data-place-es="Lago Uru Uru, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Lago Uru Uru</button>
+                        <button class="boton-lugar" data-place-en="Mina San José, Oruro, Bolivia"
+                            data-place-es="Mina San José, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Mina San José</button>
+                        <button class="boton-lugar" data-place-en="Faro de Conchupata, Oruro, Bolivia"
+                            data-place-es="Faro de Conchupata, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Faro de Conchupata</button>
+                        <button class="boton-lugar" data-place-en="Santuario del Socavón, Oruro, Bolivia"
+                            data-place-es="Santuario del Socavón, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Santuario del Socavón</button>
+                        <button class="boton-lugar" data-place-en="Salar de Coipasa, Oruro, Bolivia"
+                            data-place-es="Salar de Coipasa, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Salar de Coipasa</button>
+                        <button class="boton-lugar" data-place-en="Balneario de Cachapa, Oruro, Bolivia"
+                            data-place-es="Balneario de Cachapa, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Balneario de Cachapa</button>
+                        <button class="boton-lugar" data-place-en="Balneario de Capachos, Oruro, Bolivia"
+                            data-place-es="Balneario de Capachos, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Balneario de Capachos</button>
+                        <button class="boton-lugar" data-place-en="Templo de Curahuara de Carangas, Oruro, Bolivia"
+                            data-place-es="Templo de Curahuara de Carangas, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Templo de Curahuara de Carangas</button>
+                        <button class="boton-lugar" data-place-en="Pumiri, Turco, Oruro, Bolivia"
+                            data-place-es="Pumiri, Turco, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Formaciones rocosas de Pumiri</button>
+                        <button class="boton-lugar" data-place-en="Museo Mineralógico del Socavón, Oruro, Bolivia"
+                            data-place-es="Museo Mineralógico del Socavón, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Museo Mineralógico del Socavón</button><button class="boton-lugar"
+                            data-place-en="Minor Basilica of Our Lady of Socavón, Oruro, Bolivia"
+                            data-place-es="Basílica Menor de Nuestra Señora del Socavón, Oruro, Bolivia"
+                            onclick="ubicarLugar(idiomaActual === 'en' ? this.dataset.placeEn : this.dataset.placeEs)"
+                            type="button">Basílica Menor de Nuestra Señora del Socavón</button>
+                    </div>
+                    <p class="nota-mapa">El mapa se actualizará con la ubicación que selecciones. Comprueba el punto que
+                        muestra Google Maps para cada lugar.</p>
+                    <p class="nota-mapa"><strong>Nota:</strong> el mapa interactivo necesita internet. Sin conexión,
+                        esta página seguirá mostrando las tarjetas y descripciones, pero no cargará Google Maps.</p>
+                </div>
+            </div>
+            <div class="informacion" id="informacion">
+                <h3 id="tituloDepartamento">
+
+                    Oruro
+
+                </h3>
+                <p id="descripcionDepartamento">
+
+                    Oruro se encuentra en el altiplano boliviano y
+                    cuenta con atractivos culturales, históricos y naturales.
+                    Selecciona el botón para conocer algunos de ellos.
+
+                </p>
+                <div class="instruccion">
+
+                    📍 Explora los lugares de Oruro:
+                    <br /><br />
+                    Parque Nacional Sajama · Monumento a la Virgen del Socavón · Aguas termales de Obrajes · Plaza 10 de
+                    Febrero · Lago Uru Uru · Mina San José · Faro de Conchupata · Santuario del Socavón · Museo
+                    Mineralógico del Socavón · Salar de Coipasa · Balneario de Cachapa · Balneario de Capachos · Templo
+                    de Curahuara de Carangas · Formaciones rocosas de Pumiri
+
+                    <br /> · Basílica Menor de Nuestra Señora del Socavón
+                </div>
+                <a class="boton-whatsapp-mapa"
+                    href="https://wa.me/59160429612?text=Hola%20Leo%20Tours%2C%20quisiera%20consultar%20sobre%20lugares%20tur%C3%ADsticos%20y%20reservas%20en%20Oruro."
+                    rel="noopener noreferrer" target="_blank">Consultar rutas y reservas por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+    <section id="lugares">
+        <div class="titulo">
+            <h2>Lugares turísticos</h2>
+            <p>
+                Explora los lugares turísticos de Oruro organizados por categorías.
+            </p>
+        </div>
+        <div aria-label="Filtrar lugares por categoría" class="filtros-categorias" role="group">
+            <button aria-pressed="true" class="filtro-categoria activo" data-categoria="todos"
+                onclick="filtrarCategoria('todos')" type="button">Todos</button>
+            <button aria-pressed="false" class="filtro-categoria" data-categoria="naturaleza"
+                onclick="filtrarCategoria('naturaleza')" type="button">Naturaleza</button>
+            <button aria-pressed="false" class="filtro-categoria" data-categoria="historia"
+                onclick="filtrarCategoria('historia')" type="button">Historia y patrimonio</button>
+            <button aria-pressed="false" class="filtro-categoria" data-categoria="rutas"
+                onclick="filtrarCategoria('rutas')" type="button">Lugares para consultar con Leo Tours</button>
+        </div>
+        <div class="cards">
+            <div class="card" data-categoria="naturaleza" data-ruta="leo">
+                <img alt="Paisaje del Parque Nacional Sajama" loading="lazy" src="parquenacionalsajama.jpeg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">NATURALEZA</span>
+                    <h3>Parque Nacional Sajama</h3>
+                    <p class="descripcion">El Parque Nacional Sajama es una de las áreas naturales más importantes de
+                        Bolivia y se encuentra en el departamento de Oruro, cerca de la frontera con Chile. Fue creado
+                        en 1939 y es considerado el primer parque nacional del país. Su principal atractivo es el nevado
+                        Sajama, la montaña más alta de Bolivia, que alcanza aproximadamente 6.542 metros sobre el nivel
+                        del mar. El paisaje combina extensas planicies del altiplano, bosques de queñua, bofedales,
+                        géiseres y fuentes termales. En la zona también es posible observar animales propios de la
+                        región, como vicuñas y llamas, además de aves altoandinas. Las comunidades cercanas mantienen
+                        formas de vida relacionadas con la ganadería y con conocimientos tradicionales del altiplano.
+                        Debido a la distancia y a la altura, conviene planificar el viaje con anticipación, considerar
+                        el clima y consultar con un guía sobre transporte, accesos y condiciones del recorrido. El
+                        parque es una opción para quienes buscan naturaleza, fotografía y aventura responsable, siempre
+                        respetando el entorno y las indicaciones locales.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="historia">
+                <img alt="Monumento a la Virgen del Socavón" loading="lazy" src="virgendelsocavon.jpeg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">RELIGIÓN E HISTORIA</span>
+                    <h3>Monumento a la Virgen del Socavón</h3>
+                    <p class="descripcion">El Monumento a la Virgen del Socavón es uno de los atractivos turísticos más
+                        reconocidos de la ciudad de Oruro. Está ubicado en el cerro Santa Bárbara y representa a la
+                        Virgen María, cuya devoción tiene un lugar importante en la vida religiosa de la región. Por su
+                        altura y ubicación, la imagen se puede distinguir desde diferentes sectores de la ciudad y sus
+                        alrededores ofrecen una vista panorámica del paisaje urbano y del altiplano. El monumento está
+                        relacionado con el Carnaval de Oruro, ya que muchas fraternidades realizan su peregrinación en
+                        honor a la Virgen del Socavón. La visita permite apreciar la dimensión religiosa y simbólica de
+                        este sitio, además de observar la ciudad desde una perspectiva distinta. Es recomendable llevar
+                        abrigo, respetar los espacios señalizados y verificar las condiciones de acceso antes de ir.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="naturaleza">
+                <img alt="Aguas termales de Obrajes" loading="lazy" src="aguastermalesabrajes.jpeg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">NATURALEZA</span>
+                    <h3>Aguas termales de Obrajes</h3>
+                    <p class="descripcion">Las Aguas Termales de Obrajes son un atractivo natural ubicado en las
+                        cercanías de la ciudad de Oruro. Sus aguas provienen de fuentes subterráneas calentadas por
+                        procesos geotérmicos y son conocidas por la temperatura con la que llegan a la superficie. El
+                        lugar suele ser visitado por personas que buscan descansar, relajarse y disfrutar de un ambiente
+                        distinto al movimiento de la ciudad. Las instalaciones de baño permiten aprovechar las aguas
+                        termales como parte de una salida recreativa, aunque los servicios y las condiciones pueden
+                        variar. Obrajes también forma parte de los recursos naturales que complementan la oferta
+                        turística del departamento, junto con sus paisajes del altiplano y otros manantiales de la
+                        región. Antes de organizar una visita, conviene consultar horarios, precios, transporte y
+                        disponibilidad de los servicios, y cuidar el lugar manteniendo limpias sus instalaciones.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="historia">
+                <img alt="Plaza 10 de Febrero" loading="lazy" src="images.jpg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">HISTORIA Y PATRIMONIO</span>
+                    <h3>Plaza 10 de Febrero</h3>
+                    <p class="descripcion">La Plaza 10 de Febrero es uno de los espacios centrales más conocidos de la
+                        ciudad de Oruro. Su nombre recuerda la rebelión del 10 de febrero de 1781, un acontecimiento
+                        importante en la memoria histórica de la región durante la época colonial. La plaza funciona
+                        como punto de encuentro para habitantes y visitantes, y en sus alrededores se encuentran
+                        edificios, comercios y calles que permiten observar el movimiento cotidiano de la ciudad. Es un
+                        lugar adecuado para iniciar un recorrido a pie por el centro urbano y conocer parte de su
+                        arquitectura y de su vida pública. En fechas cívicas y celebraciones puede convertirse en
+                        escenario de actos y reuniones. Al visitarla, se puede aprovechar para conocer otros lugares
+                        cercanos, respetando los espacios públicos y las actividades de las personas que transitan por
+                        la zona.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="naturaleza" data-ruta="leo">
+                <img alt="Lago Uru Uru" loading="lazy" src="lagouruuru.jpeg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">NATURALEZA</span>
+                    <h3>Lago Uru Uru</h3>
+                    <p class="descripcion">El lago Uru Uru forma parte del paisaje altiplánico de Oruro y está conectado
+                        con el sistema de lagos y ríos de la región. Sus orillas y aguas pueden servir de hábitat para
+                        aves acuáticas, y el lugar mantiene una relación histórica con actividades locales como la
+                        pesca. En ciertas épocas, el nivel del agua y la presencia de aves cambian según las condiciones
+                        climáticas, por lo que el paisaje puede variar durante el año. El lago también enfrenta desafíos
+                        ambientales, entre ellos la contaminación y la reducción del agua, de modo que su cuidado es
+                        importante para las comunidades y para la biodiversidad. Para visitarlo, es recomendable
+                        consultar las condiciones actuales del camino y elegir puntos seguros de observación, sin dejar
+                        basura ni alterar a los animales. Aunque se encuentra relativamente cerca de la ciudad, el
+                        acceso a determinados sectores puede requerir coordinación previa.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="historia">
+                <img alt="Mina San José" loading="lazy" src="minasanjose.jpg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">HISTORIA Y PATRIMONIO</span>
+                    <h3>Mina San José</h3>
+                    <p class="descripcion">La Mina San José es uno de los sitios más representativos de la historia
+                        minera de Oruro. La actividad minera marcó profundamente el crecimiento de la ciudad, generó
+                        fuentes de trabajo y contribuyó al desarrollo de barrios, comercios y organizaciones de
+                        trabajadores. En distintas etapas, la explotación de minerales como la plata y el estaño
+                        convirtió a Oruro en un punto importante de la economía boliviana. La historia de la mina
+                        también está relacionada con el esfuerzo de generaciones de mineros, las condiciones difíciles
+                        del trabajo subterráneo y las tradiciones que se formaron alrededor de esta actividad. Para los
+                        visitantes, conocer el entorno minero permite comprender mejor por qué la minería ocupa un lugar
+                        tan importante en la memoria y la identidad de Oruro. Antes de acercarse o ingresar a cualquier
+                        instalación, es importante confirmar si existe acceso autorizado y seguir las indicaciones de
+                        seguridad; no se debe ingresar a túneles o áreas de trabajo sin permiso ni acompañamiento
+                        autorizado.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="historia">
+                <img alt="Faro de Conchupata" loading="lazy" src="images (1).jpg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">HISTORIA Y PATRIMONIO</span>
+                    <h3>Faro de Conchupata</h3>
+                    <p class="descripcion">El Faro de Conchupata es un sitio histórico y cívico de la ciudad de Oruro,
+                        relacionado con uno de los símbolos más importantes de Bolivia: la bandera tricolor. La historia
+                        local señala que en este lugar se izó la bandera boliviana en 1851, durante el gobierno de
+                        Manuel Isidoro Belzu. El faro se encuentra en una elevación urbana y antiguamente servía como
+                        punto de observación del entorno. Con el paso del tiempo se convirtió en un referente para actos
+                        cívicos y visitas escolares, especialmente en fechas relacionadas con la historia nacional. Su
+                        valor no está solamente en la construcción, sino también en los acontecimientos que representa
+                        para la memoria de Oruro y del país. Al recorrerlo, se puede conocer mejor el vínculo entre la
+                        ciudad y los símbolos patrios, además de visitar otros espacios del centro de Oruro que quedan
+                        en sus alrededores.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="historia"><img alt="Basílica Menor de Nuestra Señora del Socavón"
+                    loading="lazy" onerror="this.style.display='none'" src="basilicamenor.jpg" />
+                <div class="card-contenido"><span class="etiqueta">HISTORIA Y PATRIMONIO</span>
+                    <h3>Basílica Menor de Nuestra Señora del Socavón</h3>
+                    <p class="descripcion">La Basílica Menor de Nuestra Señora del Socavón es uno de los templos más
+                        importantes de Oruro y está estrechamente vinculada con la devoción a la Virgen del Socavón. El
+                        templo recibe a peregrinos y visitantes durante el año, especialmente durante el Carnaval de
+                        Oruro, cuando los danzarines llegan para rendir homenaje a la Virgen. Su valor religioso e
+                        histórico ayuda a comprender la relación entre la fe, las tradiciones locales y una de las
+                        celebraciones más conocidas de Bolivia. Al visitarla, se recomienda respetar el carácter sagrado
+                        del lugar y consultar las indicaciones vigentes para el ingreso y la toma de fotografías.</p>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="historia"><img alt="Museo del Socavon"
+                    loading="lazy" onerror="this.style.display='none'" src="museosocavon.jpg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">HISTORIA Y PATRIMONIO</span>
+                    <h3>Museo Mineralógico del Socavón</h3>
+                    <p class="descripcion">El Museo Mineralógico del Socavón está relacionado con la historia minera que
+                        ha marcado el desarrollo de Oruro. En un recorrido de este tipo, los visitantes pueden conocer
+                        diferentes muestras de minerales y acercarse a las características geológicas que hicieron de
+                        esta región un importante centro de explotación minera. Los minerales permiten observar variedad
+                        de colores, formas y texturas, y ayudan a comprender la riqueza del subsuelo del altiplano. El
+                        tema también se vincula con la vida de generaciones de trabajadores mineros y con el crecimiento
+                        económico y urbano de la ciudad. Para estudiantes, familias y personas interesadas en la
+                        geología, puede ser una oportunidad educativa para aprender más sobre los recursos naturales del
+                        departamento. Como los horarios y la atención pueden cambiar, es recomendable confirmar con
+                        anticipación si el museo está abierto y cuáles son las condiciones de ingreso.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="naturaleza" data-ruta="leo"><img alt="Salar de Coipasa"
+                    loading="lazy" onerror="this.style.display='none'" src="salar.jpg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">NATURALEZA</span>
+                    <h3>Salar de Coipasa</h3>
+                    <p class="descripcion">El Salar de Coipasa es una extensa planicie de sal situada al suroeste del
+                        departamento de Oruro, cerca de la frontera con Chile. Su superficie blanca, el horizonte
+                        abierto y los contrastes del cielo crean paisajes llamativos, especialmente para quienes
+                        disfrutan de la fotografía y de los espacios naturales. El salar forma parte del entorno del
+                        altiplano y se encuentra próximo al lago Coipasa y a comunidades que mantienen formas de vida
+                        adaptadas a las condiciones de esta región. Debido a su ubicación, el recorrido requiere
+                        planificación, transporte adecuado y consulta previa sobre el estado de los caminos y las
+                        condiciones climáticas. En algunos sectores el terreno puede ser difícil de reconocer o
+                        transitar, por lo que es aconsejable ir con orientación local y no ingresar sin preparación. Es
+                        importante cuidar el entorno, evitar dejar residuos y respetar las comunidades y los caminos
+                        existentes.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="naturaleza" data-ruta="leo"><img alt="Balneario de Capachos"
+                    loading="lazy" onerror="this.style.display='none'" src="capachos.jpg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">NATURALEZA</span>
+                    <h3>Balneario de Capachos</h3>
+                    <p class="descripcion">El Balneario de Capachos es conocido por sus aguas termales y se encuentra a
+                        poca distancia de la ciudad de Oruro, por la carretera que conduce hacia Cochabamba. Es una
+                        alternativa para quienes desean salir de la rutina, descansar y disfrutar de baños de agua
+                        caliente en un entorno recreativo. El lugar ha contado con espacios de baño individuales y
+                        piscina, aunque los servicios, horarios y condiciones de funcionamiento pueden cambiar con el
+                        tiempo. Por eso, antes de organizar la visita conviene confirmar si está abierto, cómo llegar y
+                        qué instalaciones se encuentran disponibles. Capachos forma parte de los atractivos termales del
+                        departamento junto con Obrajes y puede considerarse para una salida de medio día. Se recomienda
+                        llevar lo necesario para el baño, respetar las normas del balneario y mantener limpias las
+                        instalaciones.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="historia" data-ruta="leo">
+                <img alt="Templo de Curahuara de Carangas" loading="lazy" src="templo.jpg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">HISTORIA Y PATRIMONIO</span>
+                    <h3>Templo de Curahuara de Carangas</h3>
+                    <p class="descripcion">El templo de Curahuara de Carangas es uno de los sitios históricos y
+                        religiosos destacados del departamento de Oruro. Es conocido por sus pinturas murales antiguas,
+                        que cubren parte de sus paredes y muestran escenas religiosas y detalles artísticos de gran
+                        valor. Por esa decoración suele ser mencionado como un importante ejemplo del arte colonial
+                        andino. Además de su arquitectura, el templo refleja la historia de las comunidades de la zona y
+                        la manera en que se combinaron expresiones artísticas europeas y andinas. Se encuentra fuera de
+                        la ciudad de Oruro, por lo que conviene organizar el transporte y confirmar las condiciones de
+                        visita con anticipación. Si se visita, es importante respetar el templo y consultar antes de
+                        tomar fotografías en espacios donde existan restricciones.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <div class="card" data-categoria="naturaleza" data-ruta="leo">
+                <img alt="Formaciones rocosas de Pumiri" loading="lazy" src="rocosas.jpg" />
+                <div class="card-contenido">
+                    <span class="etiqueta">NATURALEZA</span>
+                    <h3>Formaciones rocosas de Pumiri</h3>
+                    <p class="descripcion">Pumiri es conocido por sus formaciones rocosas y paisajes del altiplano, que
+                        crean un entorno diferente para quienes desean conocer la naturaleza del departamento de Oruro.
+                        Las rocas, modeladas durante largos periodos por procesos naturales, forman figuras y relieves
+                        que llaman la atención de visitantes interesados en la fotografía, la geología y las caminatas.
+                        El paisaje abierto permite apreciar la amplitud del altiplano y su relación con las comunidades
+                        cercanas. Como se trata de un destino fuera del centro urbano, es aconsejable confirmar la ruta,
+                        el estado del camino y las posibilidades de transporte antes de viajar. Se recomienda acudir con
+                        orientación local, llevar agua y ropa adecuada para los cambios de temperatura, y cuidar el
+                        lugar evitando dejar residuos o dañar las formaciones rocosas.</p>
+                    <div aria-label="Galería de fotografías" class="galeria-fotos"></div>
+                    <button aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="aniversario-seccion">
+        <div class="numero">ORURO</div>
+        <h1>(10 DE FEBRERO)</h1>
+        <h2>TRADICIÓN Y CULTURA</h2>
+        <p>Un destino del altiplano boliviano<br />Historia · Folklore · Naturaleza</p>
+    </section>
+    <section class="historia-oruro" id="historia">
+        <div class="titulo">
+            <h2>Historia de Oruro</h2>
+            <p>Un recorrido por la historia de la ciudad y del departamento.</p>
+        </div>
+        <div class="historia-contenido">
+            <p>Oruro es una ciudad del altiplano boliviano cuya historia está estrechamente relacionada con la minería,
+                el comercio y la vida de sus habitantes. Fue fundada el 1 de noviembre de 1606 con el nombre de Villa de
+                San Felipe de Austria, en una región donde la riqueza mineral influyó en el crecimiento de la población
+                y en el desarrollo de sus actividades económicas. Con el paso del tiempo, la minería de plata y estaño
+                atrajo trabajadores y familias, impulsó el comercio y dejó una huella profunda en la identidad de la
+                ciudad.</p>
+            <p>Uno de los acontecimientos más importantes de su historia ocurrió el 10 de febrero de 1781, cuando
+                habitantes de Oruro participaron en una rebelión contra las autoridades coloniales. Este hecho forma
+                parte de la memoria cívica de la región y se recuerda cada año como una fecha significativa para la
+                ciudad. A lo largo de los siglos, Oruro también se convirtió en un punto de encuentro de personas,
+                costumbres, expresiones religiosas y actividades comerciales propias del altiplano.</p>
+            <p>La identidad orureña se refleja en sus espacios históricos, en la relación de muchas familias con la
+                actividad minera, en la música, en las danzas y en las tradiciones que se transmiten entre generaciones.
+                Su entorno natural, con planicies altoandinas, lagunas, montañas y salares, complementa la riqueza
+                histórica de la región y ofrece diferentes posibilidades para conocer el departamento. Actualmente,
+                Oruro es reconocida en Bolivia y fuera del país por su historia, sus paisajes y, especialmente, por el
+                Carnaval de Oruro.</p>
+        </div>
+        <div class="carnaval-historia">
+            <div class="carnaval-panel"><img alt="Bailarines de la Diablada en el Carnaval de Oruro"
+                    class="carnaval-imagen" loading="lazy" src="carnaval-oruro.jpeg" />
+                <div class="carnaval-texto">
+                    <h3>Carnaval de Oruro</h3>
+                    <p class="descripcion">El Carnaval de Oruro es una de las festividades más reconocidas de Bolivia y
+                        una expresión importante de la identidad del pueblo orureño. Se celebra cada año, principalmente
+                        durante los días previos al inicio de la Cuaresma, y reúne a fraternidades de danzarines,
+                        músicos, artesanos y visitantes que llegan de distintas regiones del país y del extranjero. La
+                        celebración está vinculada con la devoción a la Virgen del Socavón y combina creencias
+                        religiosas, tradiciones andinas y expresiones de la fe católica. Entre sus danzas más conocidas
+                        se encuentra la Diablada, junto con la Morenada, los Caporales, los Tobas y otras
+                        manifestaciones que se distinguen por sus coreografías, máscaras, bordados y trajes elaborados.
+                        La preparación de las vestimentas y de las bandas musicales requiere el trabajo de muchas
+                        personas durante meses y forma parte de la transmisión de conocimientos entre generaciones. En
+                        2001, la UNESCO proclamó el Carnaval de Oruro como Obra Maestra del Patrimonio Oral e Intangible
+                        de la Humanidad; posteriormente, en 2008, fue incorporado a la Lista Representativa del
+                        Patrimonio Cultural Inmaterial de la Humanidad. Más que un espectáculo, es una celebración que
+                        reúne a la comunidad y expresa la historia, la devoción y la creatividad de Oruro.</p><button
+                        aria-expanded="false" class="boton-ver-mas" onclick="verMas(this)" type="button">Ver
+                        más</button>
+                </div>
+            </div>
+            <p class="credito-imagen">Fotografía del Carnaval de Oruro proporcionada para este proyecto.</p>
+        </div>
+        <div aria-labelledby="titulo-videos-carnaval" class="galeria-carnaval">
+            <div class="galeria-carnaval-cabecera">
+                <div>
+                    <h3 id="titulo-videos-carnaval">Danzas del Carnaval de Oruro</h3>
+                    <p>Disfruta algunos videos de la Diablada, la Morenada y los Caporales. Pulsa «Ver en grande» para
+                        ampliar cada video.</p>
+                </div>
+            </div>
+            <div class="videos-carnaval">
+                <article class="video-carnaval-card">
+                    <div class="video-marco"><iframe
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            src="ssstik.io_1793066801497.mp4"
+                            title="Diablada en el Carnaval de Oruro 2025"></iframe></div>
+                    <div class="video-carnaval-info">
+                        <h4>La Diablada</h4>
+                        <p class="historia-danza"><strong>¿Qué representa y cómo surgió?</strong> La Diablada es una de
+                            las danzas más emblemáticas del Carnaval de Oruro. Su representación muestra la lucha entre
+                            el bien y el mal: el Arcángel San Miguel se enfrenta a Lucifer y a los pecados capitales.
+                            Con el tiempo, la danza quedó profundamente vinculada con la devoción a la Virgen del
+                            Socavón y con la tradición minera orureña. No existe una fecha de origen aceptada por todos
+                            los investigadores; las fuentes la relacionan con prácticas religiosas de la época colonial.
+                        </p>
+                        <div class="video-acciones"><button aria-expanded="false" class="boton-ver-mas"
+                                onclick="verMas(this)" type="button">Ver más</button>
+                    </div>
+                </article>
+                <article class="video-carnaval-card">
+                    <div class="video-marco"><iframe
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            src="morenada.mp4"
+                            title="Morenada del Carnaval de Oruro"></iframe></div>
+                    <div class="video-carnaval-info">
+                        <h4>Morenada</h4>
+                        <p class="historia-danza"><strong>¿Qué representa y cómo surgió?</strong> La Morenada está
+                            relacionada con la memoria de la población africana que fue traída por la fuerza durante la
+                            Colonia y sometida a la esclavitud. Una interpretación extendida vincula sus personajes y
+                            movimientos con el trabajo forzado y el sufrimiento de las personas esclavizadas. También se
+                            reconoce la participación de comunidades aymaras en el desarrollo de la danza. Sus trajes,
+                            máscaras, pasos pausados y música propia la convirtieron en una de las expresiones más
+                            representativas del Carnaval de Oruro. Los estudios señalan distintas explicaciones sobre
+                            sus orígenes, por lo que no se debe presentar una sola teoría como definitiva.</p>
+                        <div class="video-acciones"><button aria-expanded="false" class="boton-ver-mas"
+                                onclick="verMas(this)" type="button">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="video-carnaval-card">
+                    <div class="video-marco"><iframe
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            src="caporall.mp4"
+                            title="Caporales en el Carnaval de Oruro 2025"></iframe></div>
+                    <div class="video-carnaval-info">
+                        <h4>Caporales</h4>
+                        <p class="historia-danza"><strong>¿Qué representa y cómo surgió?</strong> La danza de los
+                            Caporales nació en Bolivia a fines de la década de 1960 o comienzos de la de 1970, inspirada
+                            en el personaje del caporal, el capataz que ejercía autoridad sobre trabajadores
+                            afrobolivianos. Sus raíces se relacionan con la Saya y con danzas como los Negritos o
+                            Tundiqui, aunque los investigadores distinguen estas expresiones entre sí. La versión
+                            moderna de los Caporales se asocia con los hermanos Estrada Pacheco y se caracteriza por
+                            saltos, zapateo, cascabeles y trajes llamativos. Desde entonces se difundió por Bolivia y
+                            otros países, y forma parte del Carnaval de Oruro.</p>
+                        <div class="video-acciones"><button aria-expanded="false" class="boton-ver-mas"
+                                onclick="verMas(this)" type="button">Ver más</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <p class="nota-videos">Los videos se reproducen desde YouTube; se necesita conexión a internet. El contenido
+                y la disponibilidad dependen de sus respectivos canales. Para las reseñas históricas se consultaron el
+                Archivo de Folklore Boliviano, la Cámara de Diputados de Bolivia, la Fraternidad Morenada Central Oruro
+                y el periódico La Patria.</p>
+        </div>
+    </section>
+    <div aria-hidden="true" aria-labelledby="tituloModalVideo" aria-modal="true" class="modal-video" id="modalVideo"
+        role="dialog">
+        <div class="modal-video-contenido">
+            <div class="modal-video-barra">
+                <h3 id="tituloModalVideo">Video del Carnaval</h3><button aria-label="Cerrar video"
+                    class="cerrar-modal-video" onclick="cerrarVideo()" type="button">✕ Cerrar</button>
+            </div>
+            <div class="modal-video-marco" id="contenedorVideoAmpliado"></div>
+        </div>
+    </div>
+    <section class="leo-seccion" id="leo-tours">
+        <div class="titulo">
+            <h2>Conoce y contacta a Leo Tours</h2>
+            <p>Conoce la propuesta turística de Leo Tours y consulta sobre recorridos por Oruro.</p>
+        </div>
+        <div class="ubicacion-contenido">
+            <div class="ubicacion-texto leo-panel">
+                <span class="leo-etiqueta">AGENCIA DE TURISMO</span>
+                <h3>📍 Leo Tours</h3>
+                <p>OruroXplore presenta a Leo Tours como una opción para orientar a visitantes interesados en conocer
+                    los lugares turísticos de Oruro.</p>
+                <div class="dato-contacto">
+                    <span class="dato-icono">☎</span>
+                    <div><strong>Celular de contacto</strong>
+                        <p id="telefonoLeo">+591 60429612</p>
+                    </div>
+                </div>
+                <div class="dato-contacto">
+                    <span class="dato-icono">⌖</span>
+                    <div><strong>Dirección</strong>
+                        <p id="direccionLeo">Referencia: zona entre las calles Quintana y Arce, sector San Felipe,
+                            Oruro.</p>
+                    </div>
+                </div>
+                <div class="leo-botones">
+                    <a class="boton-whatsapp"
+                        href="https://wa.me/59160429612?text=Hola%20Leo%20Tours%2C%20quisiera%20consultar%20sobre%20un%20recorrido%20tur%C3%ADstico%20por%20Oruro."
+                        rel="noopener noreferrer" target="_blank">Consultar por WhatsApp</a>
+                    <a class="boton-mapa"
+                        href="https://www.google.com/maps/search/?api=1&amp;query=entre+calle+Quintana+y+calle+Arce%2C+San+Felipe%2C+Oruro%2C+Bolivia"
+                        rel="noopener noreferrer" target="_blank">BUSCAR EN GOOGLE MAPS</a>
+                </div>
+            </div>
+            <div class="leo-mapa-contenedor">
+                <div class="leo-mapa-titulo"><span>🗺️</span>
+                    <div><strong>Ubicación referencial de Leo Tours</strong>
+                        <p>Entre Quintana y Arce, zona San Felipe, Oruro</p>
+                    </div>
+                </div>
+                <iframe class="mapa-leo" loading="lazy"
+                    src="https://maps.google.com/maps?q=entre%20calle%20Quintana%20y%20calle%20Arce%2C%20San%20Felipe%2C%20Oruro%2C%20Bolivia&amp;t=k&amp;z=16&amp;output=embed"
+                    title="Mapa de referencia de la ciudad de Oruro"></iframe>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>
+            <strong>📍 OruroXplore</strong>
+        </p>
+        <p>
+            Página informativa de los lugares turísticos de Oruro
+        </p>
+        <p>
+            Oruro · Bolivia<br />
+            OruroXplore × Operadora de turismo Leo Tours
+        </p>
+        <p>
+            Proyecto educativo · Promo 2026
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
